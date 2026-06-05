@@ -8,6 +8,8 @@ import { AppShowcaseSection } from "@/components/sections/AppShowcaseSection";
 import { ModernInvestorsSection } from "@/components/sections/ModernInvestorsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { TeamSection } from "@/components/sections/TeamSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { CTASection } from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
@@ -23,6 +25,8 @@ export default function HomePage() {
         <AboutSection />
         <TeamSection />
       </main>
+      <ContactSection />
+      <CTASection />
       <Footer />
     </>
   );
