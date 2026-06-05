@@ -1,4 +1,4 @@
-import { BarChart3, Zap, MessageSquare, Bell } from "lucide-react";
+import { TrendingUp, Newspaper, Bot, Bell } from "lucide-react";
 import { type ProblemItem, type SolutionPill } from "@/types";
 
 export const PROBLEMS: ProblemItem[] = [
@@ -28,19 +28,19 @@ export const PROBLEMS: ProblemItem[] = [
 export const SOLUTION_PILLS: SolutionPill[] = [
   {
     id: "ai-stock-analysis",
-    icon: BarChart3,
+    icon: TrendingUp,
     title: "AI Stock Analysis",
     description: "Deep, instant analysis of any stock you follow.",
   },
   {
     id: "fast-news-summaries",
-    icon: Zap,
+    icon: Newspaper,
     title: "Fast News Summaries",
     description: "Get the key points in 30 seconds, not 30 minutes.",
   },
   {
     id: "ai-trading-assistant",
-    icon: MessageSquare,
+    icon: Bot,
     title: "AI Trading Assistant",
     description: "Your intelligent market companion, available 24/7.",
   },

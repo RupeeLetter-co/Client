@@ -25,7 +25,7 @@ export function Footer() {
                 alt="RupeeLetter Logo"
                 width={32}
                 height={32}
-                className="flex-shrink-0"
+                className="flex-shrink-0 rounded-sm"
               />
               <span className="text-white font-normal text-base leading-none">
                 Rupee Letter
