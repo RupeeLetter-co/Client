@@ -1,59 +1,55 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Play, Cpu, TrendingUp } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { SectionBadge } from "@/components/ui/section-badge";
+import { TrendingUp } from "lucide-react";
 import { HERO_STATS } from "@/constants/stats";
 
 export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-white pt-16"
+      className="relative min-h-screen flex items-center overflow-hidden bg-white"
       aria-label="Hero — Trade Smarter with AI"
     >
-      {/* Subtle background blobs */}
-      <div
-        className="absolute top-20 left-[-100px] w-[400px] h-[400px] rounded-full bg-red-50 blur-3xl opacity-50 pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-20 right-[-80px] w-[350px] h-[350px] rounded-full bg-blue-50 blur-3xl opacity-40 pointer-events-none"
-        aria-hidden="true"
-      />
-
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8 w-full py-12 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[460px_1fr] gap-10 lg:gap-12 items-center">
           {/* ── Left Column ── */}
-          <div className="flex flex-col gap-7 max-w-[560px]">
-            {/* Badge */}
-            <div>
-              <SectionBadge icon={Cpu} label="AI-Powered Market Intelligence" pill />
+          <div className="flex flex-col gap-6">
+            {/* Badge — uses sparks.svg */}
+            <div className="inline-flex">
+              <div className="inline-flex items-center gap-2 px-3 py-[7px] rounded-full border border-amber-300 bg-amber-50">
+                <Image
+                  src="/assets/sparks.svg"
+                  alt=""
+                  width={14}
+                  height={14}
+                  aria-hidden="true"
+                />
+                <span className="text-[12px] font-semibold text-amber-700 leading-none">
+                  AI-Powered Market Intelligence
+                </span>
+              </div>
             </div>
 
             {/* Headline */}
-            <div>
-              <h1 className="text-[52px] md:text-[60px] lg:text-[64px] font-extrabold text-gray-900 leading-[1.08] tracking-tight">
-                Trade <span className="text-brand">Smarter</span>
-                <br />
-                with AI
-              </h1>
-            </div>
+            <h1 className="text-[52px] md:text-[58px] lg:text-[62px] font-black text-gray-900 leading-[1.06] tracking-[-0.02em] font-bold">
+              Trade <span className="text-brand">Smarter</span>
+              <br />
+              with AI
+            </h1>
 
             {/* Subtitle */}
-            <p className="text-[16px] md:text-[17px] text-gray-500 leading-relaxed max-w-[420px]">
-              Get real-time market news, AI-powered stock insights, and personalized
-              analysis—all in one app.
+            <p className="text-[16px] text-gray-500 leading-[1.65] max-w-[450px]">
+              Get real-time market news, AI-powered stock insights, and
+              personalized analysis—all in one app.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <div className="flex flex-row items-center gap-3 flex-wrap">
+              {/* Download App button */}
               <Link
                 href="#download"
                 id="hero-download-btn"
-                className={cn(
-                  "inline-flex items-center gap-2.5 px-6 h-[48px] rounded-full text-[15px] font-semibold text-white bg-brand hover:bg-brand-dark transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
-                )}
+                className="inline-flex items-center gap-2.5 pl-6 pr-5 h-[50px] rounded-full bg-brand hover:bg-brand-dark text-white text-[15px] font-semibold transition-colors duration-200 shadow-sm"
               >
                 Download App
                 <Image
@@ -68,90 +64,139 @@ export function HeroSection() {
               <Link
                 href="#showcase"
                 id="hero-demo-btn"
-                className={cn(
-                  "inline-flex items-center gap-2 px-5 h-[48px] rounded-full text-[15px] font-medium text-gray-700 border border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
-                )}
+                className="inline-flex items-center gap-2 px-5 h-[50px] rounded-full border border-gray-300 bg-white hover:bg-gray-50 text-gray-800 text-[15px] font-medium transition-colors duration-200"
               >
-                <div className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center flex-shrink-0">
-                  <Play className="h-3 w-3 text-gray-600 fill-gray-600 ml-0.5" aria-hidden="true" />
-                </div>
+                <Image
+                  src="/assets/play_circle.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  aria-hidden="true"
+                />
                 See it in action
               </Link>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center gap-0 pt-2">
-              {HERO_STATS.map((stat, index) => (
-                <div key={stat.id} className="flex items-center">
-                  <div className="flex flex-col pr-6 first:pl-0">
-                    <span className="text-[26px] font-extrabold text-gray-900 leading-tight">
-                      {stat.value}
-                    </span>
-                    <span className="text-[12px] text-gray-500 mt-0.5">{stat.label}</span>
-                  </div>
-                  {index < HERO_STATS.length - 1 && (
-                    <div className="h-10 w-px bg-gray-200 mr-6" aria-hidden="true" />
-                  )}
+            <div className="pt-2">
+              <div className="border-t border-gray-200 pt-5">
+                <div className="flex items-start justify-between">
+                  {HERO_STATS.map((stat) => (
+                    <div key={stat.id} className="flex flex-col gap-0.5">
+                      <span className="text-[28px] font-black text-gray-900 leading-tight tracking-tight font-bold">
+                        {stat.value}
+                      </span>
+                      <span className="text-[12.5px] text-gray-500 font-normal">
+                        {stat.label}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
-          {/* ── Right Column — Phone Mockup ── */}
-          <div className="relative flex items-center justify-center lg:justify-end flex-shrink-0">
-            {/* Floating Nifty card — top right */}
+          {/* ── Right Column — Phone Mockup + Floating Cards ── */}
+          <div className="relative flex items-center justify-center lg:justify-end">
             <div
-              className="absolute top-4 right-0 lg:-right-2 z-20 bg-white rounded-2xl shadow-lg border border-gray-100 p-3 min-w-[120px] animate-float"
-              aria-label="Nifty 50 index card"
-              style={{ animationDelay: "0s" }}
+              className="relative"
+              style={{ width: 500, height: 600 }}
+              aria-hidden="false"
             >
-              <p className="text-[9px] text-gray-500 font-medium tracking-wide uppercase">Nifty 50</p>
-              <p className="text-[18px] font-extrabold text-gray-900 leading-tight">24,386.70</p>
-              <div className="flex items-center gap-1 mt-0.5">
-                <TrendingUp className="h-3 w-3 text-emerald-500" aria-hidden="true" />
-                <span className="text-[11px] font-semibold text-emerald-500">+1.42%</span>
+              {/* ── Red rounded outline frame ── */}
+              <div
+                className="absolute z-0 rounded-[2.5rem] pointer-events-none"
+                style={{
+                  border: "1.5px solid #E5435026",
+                  top: "70px",
+                  left: "20px",
+                  right: "20px",
+                  bottom: "70px",
+                }}
+                aria-hidden="true"
+              >
               </div>
-            </div>
 
-            {/* Main phone mockup */}
-            <div className="relative z-10 w-[270px] md:w-[290px] lg:w-[310px] flex-shrink-0">
-              <div className="relative rounded-[2.8rem] border-[7px] border-gray-900 bg-gray-900 shadow-2xl overflow-hidden aspect-[9/19]">
-                {/* Dynamic island */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 w-24 h-6 bg-gray-900 rounded-b-2xl" />
-                <div className="relative w-full h-full overflow-hidden rounded-[2.4rem]">
-                  <Image
-                    src="/assets/app-screenshot-hero.png"
-                    alt="RupeeLetter app showing latest market news with AI sentiment analysis"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    sizes="(max-width: 768px) 270px, (max-width: 1024px) 290px, 310px"
+              {/* ── Nifty 50 card — top-right, outside phone ── */}
+              <div
+                className="absolute top-28 right-[-45] z-20 bg-white rounded-2xl border border-[#E8E6E1] p-3 w-[115px] animate-float"
+                style={{
+                  animationDelay: "0s",
+                }}
+                aria-label="Nifty 50 index"
+              >
+                <p className="text-[10px] font-medium text-[#9A9A9A] tracking-wide">
+                  Nifty 50
+                </p>
+                <p className="text-[18px] font-bold text-[#0D9B8A] leading-tight mt-0.5">
+                  24,386.70
+                </p>
+                <div className="flex items-center gap-1 mt-1 bg-[#E6F5EC] rounded-full px-2 py-0.5 w-fit">
+                  <TrendingUp
+                    className="h-3 w-3 text-[#2A8C4E]"
+                    aria-hidden="true"
                   />
+                  <span className="text-[11px] font-semibold text-[#2A8C4E]">
+                    +1.42%
+                  </span>
                 </div>
               </div>
-            </div>
 
-            {/* Floating News Processed card — bottom left of phone */}
-            <div
-              className="absolute bottom-10 left-0 lg:-left-4 z-20 bg-white rounded-2xl shadow-lg border border-gray-100 p-3 min-w-[130px] animate-float"
-              aria-label="News processed today"
-              style={{ animationDelay: "1.5s" }}
-            >
-              <p className="text-[9px] text-gray-500 font-medium tracking-wide uppercase">News Processed</p>
-              <p className="text-[20px] font-extrabold text-gray-900 leading-tight">2,400+</p>
-              <p className="text-[10px] text-gray-400">articles today</p>
-            </div>
+              {/* ── Main phone image — centred ── */}
+              <div
+                className="absolute z-10"
+                style={{
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <Image
+                  src="/assets/app-screenshot-hero.png"
+                  alt="RupeeLetter app showing AI-curated market news"
+                  width={380}
+                  height={560}
+                  className="object-contain"
+                  priority
+                />
+              </div>
 
-            {/* Floating AI Confidence card — bottom right */}
-            <div
-              className="absolute bottom-4 right-0 lg:-right-2 z-20 bg-white rounded-2xl shadow-lg border border-gray-100 p-3 min-w-[120px] animate-float"
-              aria-label="AI confidence indicator"
-              style={{ animationDelay: "0.75s" }}
-            >
-              <p className="text-[9px] text-gray-500 font-medium tracking-wide uppercase">AI Confidence</p>
-              <p className="text-[15px] font-bold text-gray-900">Bullish</p>
-              <div className="mt-1 px-2 py-0.5 bg-red-100 rounded-full inline-block">
-                <p className="text-[10px] font-semibold text-brand">HDFC Bank</p>
+              {/* ── News Processed card — bottom-left ── */}
+              <div
+                className="absolute bottom-30 left-[-65] z-20 bg-white rounded-2xl border border-[#E8E6E1] px-3 py-2.5 w-[120px] animate-float"
+                style={{
+                  animationDelay: "1.5s",
+                }}
+                aria-label="News processed today"
+              >
+                <p className="text-[10px] text-[#9A9A9A] tracking-wide">
+                  News Processed
+                </p>
+                <p className="text-[20px] font-bold text-brand leading-tight mt-0.5">
+                  2,400+
+                </p>
+                <p className="text-[10px] text-[#9A9A9A] mt-0.5">
+                  articles today
+                </p>
+              </div>
+
+              {/* ── AI Confidence card — right side, vertically centred ── */}
+              <div
+                className="absolute right-[-60] z-20 bg-white rounded-2xl border border-[#E8E6E1] px-3 py-2.5 w-[105px] animate-float"
+                style={{
+                  top: "65%",
+                  animationDelay: "0.8s",
+                }}
+                aria-label="AI confidence indicator"
+              >
+                <p className="text-[10px] font-semibold text-[#9A9A9A] tracking-wide">
+                  AI Confidence
+                </p>
+                <p className="text-[18px] font-bold text-gray-900 leading-tight mt-0.5">
+                  Bullish
+                </p>
+                <div className="mt-1.5 inline-flex px-2 py-0.5 bg-[#FFF0F1] rounded-full">
+                  <p className="text-[10px] font-bold text-brand">HDFC Bank</p>
+                </div>
               </div>
             </div>
           </div>

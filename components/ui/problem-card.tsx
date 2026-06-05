@@ -12,26 +12,27 @@ export function ProblemCard({ problem, className }: ProblemCardProps) {
   return (
     <div
       className={cn(
-        "group flex flex-col gap-4 rounded-2xl border border-border bg-card p-6",
-        "transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
+        "group relative flex flex-col gap-6 rounded-3xl border border-gray-100 bg-[#FAFAFA] p-7 pt-8 overflow-hidden",
+        "transition-all duration-300 hover:shadow-sm hover:-translate-y-0.5",
+        "h-full",
         className
       )}
     >
+      {/* Top Accent */}
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E8393A]" aria-hidden="true" />
+
       {/* Number */}
       <span
-        className="text-5xl font-extrabold text-brand leading-none"
+        className="text-[42px] font-black text-[#E8393A] leading-none tracking-tight"
         aria-label={`Problem ${number}`}
       >
         {number}
       </span>
 
-      {/* Divider */}
-      <div className="h-px w-full bg-border" aria-hidden="true" />
-
       {/* Content */}
-      <div className="flex flex-col gap-2">
-        <h3 className="text-base font-semibold text-foreground">{title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+      <div className="flex flex-col gap-2.5">
+        <h3 className="text-[17px] font-bold text-gray-900 leading-snug tracking-tight">{title}</h3>
+        <p className="text-[14px] text-gray-500 leading-[1.65]">
           {description}
         </p>
       </div>

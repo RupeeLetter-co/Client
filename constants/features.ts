@@ -1,9 +1,9 @@
 import {
   Newspaper,
-  Brain,
-  BarChart3,
+  Bot,
+  TrendingUp,
   Bell,
-  Rss,
+  Bookmark,
   MessageSquare,
 } from "lucide-react";
 import { type FeatureItem } from "@/types";
@@ -20,16 +20,16 @@ export const FEATURES: FeatureItem[] = [
   },
   {
     id: "ai-powered-insights",
-    icon: Brain,
+    icon: Bot,
     title: "AI-Powered Insights",
     description:
       "Our AI explains the market impact of every news event in plain language—no financial jargon.",
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-500",
+    iconBg: "bg-teal-50",
+    iconColor: "text-teal-500",
   },
   {
     id: "stock-analysis",
-    icon: BarChart3,
+    icon: TrendingUp,
     title: "Stock Analysis",
     description:
       "Deep AI analysis for every stock in your watchlist—sentiment, technicals, and key events.",
@@ -47,12 +47,12 @@ export const FEATURES: FeatureItem[] = [
   },
   {
     id: "personalized-feed",
-    icon: Rss,
+    icon: Bookmark,
     title: "Personalized Feed",
     description:
       "Your feed adapts to your watchlist and interests. See only what matters to you.",
-    iconBg: "bg-teal-50",
-    iconColor: "text-teal-500",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-500",
   },
   {
     id: "ai-trading-assistant",
@@ -60,7 +60,7 @@ export const FEATURES: FeatureItem[] = [
     title: "AI Trading Assistant",
     description:
       "Ask any market question and get intelligent, context-aware answers instantly.",
-    iconBg: "bg-pink-50",
-    iconColor: "text-pink-500",
+    iconBg: "bg-rose-50",
+    iconColor: "text-rose-500",
   },
 ];

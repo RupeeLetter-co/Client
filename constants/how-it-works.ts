@@ -1,38 +1,46 @@
+import { type ReactNode } from "react";
+import { Eye, Newspaper, BrainCircuit, Check } from "lucide-react";
 import { type HowItWorksStep } from "@/types";
 
-export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
+export const HOW_IT_WORKS_STEPS = [
   {
-    id: "download",
-    number: "01",
-    title: "Download & Set Up",
+    id: "track-stocks",
+    icon: Eye,
+    title: "Track Stocks",
     description:
-      "Install RupeeLetter and create your account in under 2 minutes. No KYC, no paperwork.",
-    color: "#E8393A",
+      "Add stocks to your personal watchlist and tell us what you care about.",
+    iconBg: "bg-red-50",
+    iconColor: "text-brand",
+    lineColor: "from-brand to-amber-500",
   },
   {
-    id: "watchlist",
-    number: "02",
-    title: "Build Your Watchlist",
+    id: "get-news",
+    icon: Newspaper,
+    title: "Get News",
     description:
-      "Add the stocks and sectors you care about. RupeeLetter learns your preferences instantly.",
-    color: "#3B82F6",
+      "We aggregate and summarize news relevant to your portfolio in real time.",
+    iconBg: "bg-amber-50",
+    iconColor: "text-amber-500",
+    lineColor: "from-amber-500 to-teal-500",
   },
   {
-    id: "insights",
-    number: "03",
-    title: "Get AI Insights",
+    id: "ai-analyzes",
+    icon: BrainCircuit,
+    title: "AI Analyzes Impact",
     description:
-      "Receive real-time summaries, sentiment scores, and deep analysis for every event that impacts your portfolio.",
-    color: "#10B981",
+      "Our AI evaluates the news and explains what it means for your specific holdings.",
+    iconBg: "bg-teal-50",
+    iconColor: "text-teal-500",
+    lineColor: "from-teal-500 to-emerald-500",
   },
   {
-    id: "decide",
-    number: "04",
-    title: "Trade with Confidence",
+    id: "make-decisions",
+    icon: Check,
+    title: "Make Better Decisions",
     description:
-      "Use AI-powered context to make smarter, faster, and more informed investment decisions every day.",
-    color: "#F59E0B",
+      "Act confidently with AI-backed clarity instead of gut feel or incomplete data.",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-500",
+    lineColor: "",
   },
 ];
-
-export const GRADIENT_COLORS = ["#E8393A", "#3B82F6", "#10B981", "#F59E0B"];
