@@ -55,6 +55,7 @@ export interface InvestorFeature {
   id: string;
   icon: LucideIcon;
   iconColor: string;
+  iconBg?: string;
   title: string;
   description: string;
 }

@@ -1,35 +1,39 @@
-import { CheckCircle2, Shield, Zap, Globe } from "lucide-react";
+import { Zap, BrainCircuit, UserRound, Network } from "lucide-react";
 import { type InvestorFeature, type AboutStat } from "@/types";
 
 export const INVESTOR_FEATURES: InvestorFeature[] = [
   {
     id: "always-updated",
     icon: Zap,
-    iconColor: "text-red-500",
+    iconColor: "text-[#E8393A]",
+    iconBg: "bg-red-50",
     title: "Always Up-to-Date",
     description:
       "News and analysis refreshed in real time so you're always working with the latest information.",
   },
   {
     id: "personalized",
-    icon: CheckCircle2,
-    iconColor: "text-emerald-500",
+    icon: BrainCircuit,
+    iconColor: "text-teal-600",
+    iconBg: "bg-teal-50",
     title: "Fully Personalized",
     description:
       "Your watchlist, your sectors, your preferences—RupeeLetter adapts entirely to you.",
   },
   {
     id: "secure",
-    icon: Shield,
-    iconColor: "text-blue-500",
+    icon: UserRound,
+    iconColor: "text-amber-500",
+    iconBg: "bg-amber-50",
     title: "Private & Secure",
     description:
       "Your data stays yours. We never sell personal information or share trading behavior.",
   },
   {
     id: "multi-market",
-    icon: Globe,
-    iconColor: "text-amber-500",
+    icon: Network,
+    iconColor: "text-indigo-500",
+    iconBg: "bg-indigo-50",
     title: "NSE, BSE & Global",
     description:
       "Coverage across NSE, BSE, US markets, commodities, and forex—all in one place.",
