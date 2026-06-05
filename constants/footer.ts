@@ -3,39 +3,30 @@ import { type FooterSection } from "@/types";
 export const FOOTER_SECTIONS: FooterSection[] = [
   {
     id: "product",
-    title: "Product",
+    title: "PRODUCT",
     links: [
       { label: "Features", href: "#features" },
+      { label: "App Screenshots", href: "#screenshots" },
       { label: "How It Works", href: "#how-it-works" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Download App", href: "#download" },
+      { label: "Why RupeeLetter", href: "#why-rupee-letter" },
     ],
   },
   {
     id: "company",
-    title: "Company",
+    title: "COMPANY",
     links: [
       { label: "About Us", href: "#about" },
       { label: "Team", href: "#team" },
-      { label: "Blog", href: "/blog" },
-      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "#contact" },
     ],
   },
   {
     id: "legal",
-    title: "Legal",
+    title: "LEGAL",
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
       { label: "Disclaimer", href: "/disclaimer" },
-      { label: "Cookie Policy", href: "/cookies" },
     ],
   },
 ];
-
-export const SOCIAL_LINKS = {
-  twitter: "https://twitter.com",
-  linkedin: "https://linkedin.com",
-  instagram: "https://instagram.com",
-  youtube: "https://youtube.com",
-};
