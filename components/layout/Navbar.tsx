@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -20,7 +21,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,40 +30,43 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white",
+        isScrolled ? "shadow-sm border-b border-gray-100" : "border-b border-gray-100"
       )}
       role="banner"
     >
       <nav
-        className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 flex items-center justify-between h-16"
+        className="mx-auto max-w-6xl px-6 lg:px-8 flex items-center justify-between h-[64px]"
         aria-label="Main navigation"
       >
         {/* Logo */}
         <Link
           href="#home"
-          className="flex items-center gap-2 font-bold text-lg text-foreground hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
           aria-label="RupeeLetter — Go to homepage"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand">
-            <TrendingUp className="h-4 w-4 text-white" aria-hidden="true" />
-          </div>
-          <span>
+          <Image
+            src="/assets/Logo.svg"
+            alt="RupeeLetter logo"
+            width={32}
+            height={32}
+            className="flex-shrink-0"
+            priority
+          />
+          <span className="text-[15px] font-semibold text-gray-900 tracking-tight">
             Rupee<span className="text-brand">Letter</span>
           </span>
         </Link>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex items-center gap-1" role="list">
+        <ul className="hidden md:flex items-center gap-0" role="list">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 className={cn(
-                  "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                  "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  "px-4 py-2 text-[13.5px] font-medium transition-colors",
+                  "text-gray-600 hover:text-gray-900"
                 )}
               >
                 {link.label}
@@ -72,16 +76,22 @@ export function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center">
           <Link
             href="#download"
             id="navbar-download-btn"
             className={cn(
-              buttonVariants({ size: "sm" }),
-              "bg-brand hover:bg-brand-dark text-white rounded-full px-5"
+              "inline-flex items-center gap-2 px-5 py-2 rounded-full text-[13.5px] font-semibold text-white bg-brand hover:bg-brand-dark transition-colors duration-200"
             )}
           >
             Download App
+            <Image
+              src="/assets/GooglePlayButton.svg"
+              alt=""
+              width={13}
+              height={15}
+              aria-hidden="true"
+            />
           </Link>
         </div>
 
@@ -103,10 +113,16 @@ export function Navbar() {
             <SheetContent side="right" className="w-72">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2 text-left">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand">
-                    <TrendingUp className="h-3.5 w-3.5 text-white" />
-                  </div>
-                  Rupee<span className="text-brand">Letter</span>
+                  <Image
+                    src="/assets/Logo.svg"
+                    alt="RupeeLetter logo"
+                    width={28}
+                    height={28}
+                    className="flex-shrink-0"
+                  />
+                  <span className="text-sm font-semibold text-gray-900">
+                    Rupee<span className="text-brand">Letter</span>
+                  </span>
                 </SheetTitle>
               </SheetHeader>
 
@@ -131,12 +147,18 @@ export function Navbar() {
                   href="#download"
                   id="mobile-download-btn"
                   className={cn(
-                    buttonVariants(),
-                    "w-full bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center"
+                    "w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition-colors"
                   )}
                   onClick={() => setIsOpen(false)}
                 >
                   Download App
+                  <Image
+                    src="/assets/GooglePlayButton.svg"
+                    alt=""
+                    width={13}
+                    height={15}
+                    aria-hidden="true"
+                  />
                 </Link>
               </div>
             </SheetContent>
