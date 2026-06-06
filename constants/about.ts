@@ -18,7 +18,7 @@ export const INVESTOR_FEATURES: InvestorFeature[] = [
     iconBg: "bg-teal-50",
     title: "Fully Personalized",
     description:
-      "Your watchlist, your sectors, your preferences—RupeeLetter adapts entirely to you.",
+      "Your watchlist, your sectors, your preferences - RupeeLetter adapts entirely to you.",
   },
   {
     id: "secure",
@@ -36,7 +36,7 @@ export const INVESTOR_FEATURES: InvestorFeature[] = [
     iconBg: "bg-indigo-50",
     title: "NSE, BSE & Global",
     description:
-      "Coverage across NSE, BSE, US markets, commodities, and forex—all in one place.",
+      "Coverage across NSE, BSE, US markets, commodities, and forex - all in one place.",
   },
 ];
 

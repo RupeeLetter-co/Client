@@ -23,9 +23,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rupeeletter.com"),
-  title: "RupeeLetter — AI-Powered Market Intelligence for Indian Investors",
+  title: "RupeeLetter - AI-Powered Market Intelligence for Indian Investors",
   description:
-    "Get real-time market news, AI-powered stock insights, and personalized analysis for the Indian stock market. NSE, BSE, and global markets — all in one app.",
+    "Get real-time market news, AI-powered stock insights, and personalized analysis for the Indian stock market. NSE, BSE, and global markets - all in one app.",
   keywords: [
     "stock market app india",
     "AI stock analysis",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://rupeeletter.com",
     siteName: "RupeeLetter",
-    title: "RupeeLetter — AI-Powered Market Intelligence",
+    title: "RupeeLetter - AI-Powered Market Intelligence",
     description:
       "Get real-time market news, AI-powered stock insights, and personalized analysis. Join 10K+ active investors.",
     images: [
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "RupeeLetter — Trade Smarter with AI",
+        alt: "RupeeLetter - Trade Smarter with AI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RupeeLetter — AI-Powered Market Intelligence",
+    title: "RupeeLetter - AI-Powered Market Intelligence",
     description:
       "Real-time market news, AI stock insights, and personalized analysis for Indian investors.",
     creator: "@rupeeletter",

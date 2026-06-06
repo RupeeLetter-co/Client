@@ -14,8 +14,8 @@ export function ModernInvestorsSection() {
           {/* Left: Header */}
           <div className="lg:col-span-5 flex flex-col items-start gap-6">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-red-100 bg-red-50 text-brand">
-              <Users className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[11px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">FOR INVESTORS</span>
+              <Users className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+              <span className="text-[13px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">FOR INVESTORS</span>
             </div>
             
             <h2 className="text-[40px] md:text-[46px] lg:text-[52px] text-gray-900 leading-[1.1] tracking-tight max-w-[420px]">

@@ -24,9 +24,9 @@ export const FOOTER_SECTIONS: FooterSection[] = [
     id: "legal",
     title: "LEGAL",
     links: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
-      { label: "Disclaimer", href: "/disclaimer" },
+      { label: "Privacy Policy", href: "https://news.rupeeletter.com/disclaimer" },
+      { label: "Terms and Conditions", href: "https://news.rupeeletter.com/terms-and-conditions" },
+      { label: "Disclaimer", href: "https://news.rupeeletter.com/disclaimer" },
     ],
   },
 ];

@@ -14,8 +14,8 @@ export function FeaturesSection() {
         <div className="flex flex-col gap-5 max-w-2xl mb-16">
           <div className="inline-flex">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-red-100 bg-red-50 text-brand">
-              <LayoutGrid className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[11px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">PRODUCT</span>
+              <LayoutGrid className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+              <span className="text-[13px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">PRODUCT</span>
             </div>
           </div>
           

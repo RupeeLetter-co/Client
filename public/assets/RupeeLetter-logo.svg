@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" width="260" height="48">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&amp;display=swap');
+  </style>
+  <text x="0" y="40" fill="#E8393A" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="normal" font-size="46" letter-spacing="-1">₹</text>
+  <text x="27" y="38" fill="#1A1A1A" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="normal" font-size="36" letter-spacing="-0.5">upeeLetter</text>
+</svg>

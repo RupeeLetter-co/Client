@@ -23,7 +23,7 @@ export const FEATURES: FeatureItem[] = [
     icon: Bot,
     title: "AI-Powered Insights",
     description:
-      "Our AI explains the market impact of every news event in plain language—no financial jargon.",
+      "Our AI explains the market impact of every news event in plain language - no financial jargon.",
     iconBg: "bg-teal-50",
     iconColor: "text-teal-500",
   },
@@ -32,7 +32,7 @@ export const FEATURES: FeatureItem[] = [
     icon: TrendingUp,
     title: "Stock Analysis",
     description:
-      "Deep AI analysis for every stock in your watchlist—sentiment, technicals, and key events.",
+      "Deep AI analysis for every stock in your watchlist - sentiment, technicals, and key events.",
     iconBg: "bg-amber-50",
     iconColor: "text-amber-500",
   },
@@ -41,7 +41,7 @@ export const FEATURES: FeatureItem[] = [
     icon: Bell,
     title: "Smart Alerts",
     description:
-      "Get notified about events that matter to your portfolio—before it's too late to act.",
+      "Get notified about events that matter to your portfolio - before it's too late to act.",
     iconBg: "bg-blue-50",
     iconColor: "text-blue-500",
   },

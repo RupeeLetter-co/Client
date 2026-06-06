@@ -42,20 +42,17 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="#home"
-          className="flex items-center gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
-          aria-label="RupeeLetter — Go to homepage"
+          className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0"
+          aria-label="RupeeLetter - Go to homepage"
         >
           <Image
-            src="/assets/Logo.svg"
-            alt="RupeeLetter logo"
-            width={32}
-            height={32}
-            className="flex-shrink-0"
+            src="/assets/RupeeLetter-logo.svg"
+            alt="RupeeLetter"
+            width={160}
+            height={40}
+            className="flex-shrink-0 h-[34px] w-auto"
             priority
           />
-          <span className="text-[15px] font-semibold text-gray-900 tracking-tight">
-            Rupee<span className="text-brand">Letter</span>
-          </span>
         </Link>
 
         {/* Desktop Nav Links */}
@@ -78,7 +75,9 @@ export function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
           <Link
-            href="#download"
+            href="https://play.google.com/store/apps/details?id=com.rupeeletter.newsapp"
+            target="_blank"
+            rel="noopener noreferrer"
             id="navbar-download-btn"
             className={cn(
               "inline-flex items-center gap-2 px-5 py-2 rounded-full text-[13.5px] font-semibold text-white bg-brand hover:bg-brand-dark transition-colors duration-200"
@@ -112,17 +111,14 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
               <SheetHeader>
-                <SheetTitle className="flex items-center gap-2 text-left">
+                <SheetTitle className="flex items-center text-left">
                   <Image
-                    src="/assets/Logo.svg"
-                    alt="RupeeLetter logo"
-                    width={28}
-                    height={28}
-                    className="flex-shrink-0"
+                    src="/assets/RupeeLetter-logo.svg"
+                    alt="RupeeLetter"
+                    width={140}
+                    height={36}
+                    className="flex-shrink-0 h-[28px] w-auto"
                   />
-                  <span className="text-sm font-semibold text-gray-900">
-                    Rupee<span className="text-brand">Letter</span>
-                  </span>
                 </SheetTitle>
               </SheetHeader>
 
@@ -144,7 +140,9 @@ export function Navbar() {
 
               <div className="mt-6 px-4">
                 <Link
-                  href="#download"
+                  href="https://play.google.com/store/apps/details?id=com.rupeeletter.newsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   id="mobile-download-btn"
                   className={cn(
                     "w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition-colors"

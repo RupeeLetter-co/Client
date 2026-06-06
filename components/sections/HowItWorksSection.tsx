@@ -14,8 +14,8 @@ export function HowItWorksSection() {
         <div className="flex flex-col items-center text-center gap-4 max-w-2xl mx-auto mb-16">
           <div className="inline-flex">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-red-100 bg-red-50 text-brand">
-              <SlidersHorizontal className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[11px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">HOW IT WORKS</span>
+              <SlidersHorizontal className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+              <span className="text-[13px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">HOW IT WORKS</span>
             </div>
           </div>
           

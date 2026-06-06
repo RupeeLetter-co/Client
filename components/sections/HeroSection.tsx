@@ -14,22 +14,6 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[460px_1fr] gap-10 lg:gap-12 items-center">
           {/* ── Left Column ── */}
           <div className="flex flex-col gap-6">
-            {/* Badge — uses sparks.svg */}
-            <div className="inline-flex">
-              <div className="inline-flex items-center gap-2 px-3 py-[7px] rounded-full border border-amber-300 bg-amber-50">
-                <Image
-                  src="/assets/sparks.svg"
-                  alt=""
-                  width={14}
-                  height={14}
-                  aria-hidden="true"
-                />
-                <span className="text-[12px] font-semibold text-amber-700 leading-none">
-                  AI-Powered Market Intelligence
-                </span>
-              </div>
-            </div>
-
             {/* Headline */}
             <h1 className="text-[52px] md:text-[58px] lg:text-[62px] font-black text-gray-900 leading-[1.06] tracking-[-0.02em] font-bold">
               Trade <span className="text-brand">Smarter</span>
@@ -40,14 +24,16 @@ export function HeroSection() {
             {/* Subtitle */}
             <p className="text-[16px] text-gray-500 leading-[1.65] max-w-[450px]">
               Get real-time market news, AI-powered stock insights, and
-              personalized analysis—all in one app.
+              personalized analysis - all in one app.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-row items-center gap-3 flex-wrap">
               {/* Download App button */}
               <Link
-                href="#download"
+                href="https://play.google.com/store/apps/details?id=com.rupeeletter.newsapp"
+                target="_blank"
+                rel="noopener noreferrer"
                 id="hero-download-btn"
                 className="inline-flex items-center gap-2.5 pl-6 pr-5 h-[50px] rounded-full bg-brand hover:bg-brand-dark text-white text-[15px] font-semibold transition-colors duration-200 shadow-sm"
               >

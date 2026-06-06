@@ -17,19 +17,16 @@ export function Footer() {
           <div className="lg:col-span-1 flex flex-col gap-4">
             <Link
               href="#home"
-              className="flex items-center gap-2 w-fit hover:opacity-80 transition-opacity"
+              className="flex items-center w-fit hover:opacity-80 transition-opacity"
               aria-label="RupeeLetter homepage"
             >
               <Image
-                src="/assets/Logo.svg"
+                src="/assets/RupeeLetter-logo.svg"
                 alt="RupeeLetter Logo"
-                width={32}
-                height={32}
-                className="flex-shrink-0 rounded-sm"
+                width={140}
+                height={36}
+                className="flex-shrink-0 h-[28px] w-auto brightness-0 invert"
               />
-              <span className="text-white font-normal text-base leading-none">
-                Rupee Letter
-              </span>
             </Link>
 
             <p className="text-xs text-gray-400 leading-relaxed max-w-[220px]">
@@ -45,16 +42,20 @@ export function Footer() {
                 {section.title}
               </h3>
               <ul className="flex flex-col gap-3" role="list">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-xs text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {section.links.map((link) => {
+                  const isExternal = link.href.startsWith("http");
+                  return (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-xs text-gray-400 hover:text-white transition-colors"
+                        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -69,7 +70,7 @@ export function Footer() {
             © 2025 RupeeLetter AI. All rights reserved. Not SEBI registered.
             For informational purposes only.
           </p>
-          <p className="text-gray-500">harshgawandi24@gmail.com</p>
+          <p className="text-gray-500">rupeeletter@gmail.com</p>
         </div>
       </div>
     </footer>

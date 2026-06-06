@@ -18,9 +18,9 @@ export default function HomePage() {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <FeaturesSection />
+        <AppShowcaseSection />
         <ProblemSection />
         <HowItWorksSection />
-        <AppShowcaseSection />
         <ModernInvestorsSection />
         <AboutSection />
         <TeamSection />

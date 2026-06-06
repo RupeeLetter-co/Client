@@ -124,7 +124,7 @@ export function CTASection() {
               <span
                 style={{
                   fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "10px",
+                  fontSize: "12px",
                   fontWeight: 500,
                   letterSpacing: "0.15em",
                   color: "rgba(255,255,255,0.65)",
@@ -222,7 +222,9 @@ export function CTASection() {
             >
               {/* Download App: 191×54px, radius 100px, bg #FFFFFF — GP icon right */}
               <a
-                href="#download"
+                href="https://play.google.com/store/apps/details?id=com.rupeeletter.newsapp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cta-btn-primary"
                 style={{
                   display: "inline-flex",

@@ -27,7 +27,7 @@ export function TeamSection() {
         {/* Badge */}
         <div
           style={{
-            width: "114px",
+            width: "140px",
             height: "28px",
             borderRadius: "100px",
             backgroundColor: "#FFF0F1",
@@ -38,14 +38,14 @@ export function TeamSection() {
             marginBottom: "24px",
           }}
         >
-          <svg viewBox="0 0 640 512" width="18" height="18" fill="#E8393A">
+          <svg viewBox="0 0 640 512" width="20" height="20" fill="#E8393A">
             <path d="M144 160c-44.2 0-80-35.8-80-80S99.8 0 144 0s80 35.8 80 80-35.8 80-80 80zm352 0c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80zM320 256c-61.9 0-112-50.1-112-112S258.1 32 320 32s112 50.1 112 112-50.1 112-112 112zm176 32h-16.5c-20 12.3-44.4 19.5-70.3 20.8 38.3 33.3 62.8 81.3 62.8 135.2V480h104c26.5 0 48-21.5 48-48v-28c0-64.1-51.9-116-116-116zm-352 0C80.1 288 28.2 339.9 28.2 404v28c0 26.5 21.5 48 48 48h104v-36c0-53.9 24.5-101.9 62.8-135.2-25.9-1.3-50.3-8.5-70.3-20.8H144zM320 320c-70.7 0-128 57.3-128 128v32c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-32c0-70.7-57.3-128-128-128z" />
           </svg>
           <span
             style={{
               color: "#E8393A",
               fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-              fontSize: "11px",
+              fontSize: "13px",
               fontWeight: 700,
               letterSpacing: "0.05em",
             }}

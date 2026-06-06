@@ -15,8 +15,8 @@ export function ProblemSection() {
         <div className="flex flex-col items-center text-center gap-5 max-w-3xl mx-auto mb-16">
           <div className="inline-flex">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-red-100 bg-red-50 text-brand">
-              <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[11px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">THE PROBLEM</span>
+              <AlertTriangle className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+              <span className="text-[13px] font-bold tracking-[0.12em] uppercase leading-none mt-[1px]">THE PROBLEM</span>
             </div>
           </div>
           

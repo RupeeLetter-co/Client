@@ -53,13 +53,13 @@ export function ContactSection() {
               backgroundColor: "rgba(232, 57, 58, 0.05)",
               color: "#e8393a",
               fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-              fontSize: "11px",
+              fontSize: "13px",
               fontWeight: 700,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}
           >
-            <Mail size={12} strokeWidth={2.5} />
+            <Mail size={14} strokeWidth={2.5} />
             CONTACT
           </div>
 
@@ -334,7 +334,7 @@ export function ContactSection() {
                     color: "#e8393a",
                   }}
                 >
-                  harshgawandi24@gmail.com
+                  rupeeletter@gmail.com
                 </p>
               </div>
             </div>
@@ -399,7 +399,7 @@ export function ContactSection() {
                     color: "#e8393a",
                   }}
                 >
-                  harshgawandi24@gmail.com
+                  rupeeletter@gmail.com
                 </p>
               </div>
             </div>

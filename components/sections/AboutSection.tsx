@@ -43,7 +43,7 @@ export function AboutSection() {
             {/* Badge */}
             <div
               style={{
-                width: "182px",
+                width: "210px",
                 height: "28px",
                 borderRadius: "100px",
                 backgroundColor: "#FFF0F1",
@@ -54,12 +54,12 @@ export function AboutSection() {
                 marginBottom: "24px",
               }}
             >
-              <Info size={12} color="#E8393A" strokeWidth={2.5} />
+              <Info size={14} color="#E8393A" strokeWidth={2.5} />
               <span
                 style={{
                   color: "#E8393A",
                   fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "11px",
+                  fontSize: "13px",
                   fontWeight: 700,
                   letterSpacing: "0.05em",
                 }}
