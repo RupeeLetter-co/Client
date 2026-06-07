@@ -5,7 +5,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="w-full max-w-[1920px] mx-auto min-h-0 bg-surface py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
+      className="w-full max-w-[1920px] mx-auto min-h-0 bg-surface py-10 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
       aria-label="About RupeeLetter AI"
     >
       <div className="w-full max-w-[1160px] flex flex-col">

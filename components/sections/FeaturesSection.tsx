@@ -6,7 +6,7 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
-      className="bg-surface py-20 px-6 lg:px-8"
+      className="bg-surface py-12 sm:py-16 lg:py-20 px-6 lg:px-8"
       aria-label="Product features"
     >
       <div className="mx-auto max-w-6xl">

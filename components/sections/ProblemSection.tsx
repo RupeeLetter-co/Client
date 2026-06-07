@@ -7,7 +7,7 @@ export function ProblemSection() {
   return (
     <section
       id="problem"
-      className="bg-white py-20 px-6 lg:px-8"
+      className="bg-white py-12 sm:py-16 lg:py-20 px-6 lg:px-8"
       aria-label="The problem with retail trading"
     >
       <div className="mx-auto max-w-6xl">

@@ -4,7 +4,7 @@ export function TeamSection() {
   return (
     <section
       id="team"
-      className="w-full max-w-[1920px] mx-auto bg-white flex items-center justify-center py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8"
+      className="w-full max-w-[1920px] mx-auto bg-white flex items-center justify-center py-10 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8"
     >
       <div className="w-full max-w-[1160px] flex flex-col items-center">
         {/* Badge */}

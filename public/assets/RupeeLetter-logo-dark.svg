@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" width="260" height="48">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,800');
+  </style>
+  <text x="0" y="40" fill="#E00000" font-family="'Bodoni Moda', serif" font-weight="800" font-size="46" letter-spacing="-1">₹</text>
+  <text x="26" y="40" fill="#FFFFFF" font-family="'Bodoni Moda', serif" font-weight="800" font-size="44" letter-spacing="-1">upeeLetter</text>
+</svg>

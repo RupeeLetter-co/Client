@@ -11,7 +11,7 @@ export function CTASection() {
       <section
         id="cta"
         aria-labelledby="cta-heading"
-        className="w-full bg-white py-12 sm:py-16 lg:py-[100px] lg:pb-20"
+        className="w-full bg-white py-8 sm:py-12 lg:py-[100px] lg:pb-20"
       >
         {/* Horizontal centring container */}
         <div className="mx-auto max-w-[1096px] px-4 sm:px-6">

@@ -10,10 +10,10 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden bg-white"
       aria-label="Hero — Trade Smarter with AI"
     >
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full pt-16 pb-10 sm:py-16 lg:py-20">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full pt-24 pb-6 sm:pt-28 sm:pb-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[460px_1fr] gap-8 lg:gap-12 items-center">
           {/* ── Left Column ── */}
-          <div className="flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start">
+          <div className="flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start mt-8 sm:mt-12 lg:mt-0">
             {/* Headline */}
             <h1 className="text-[40px] sm:text-[48px] md:text-[54px] lg:text-[62px] font-black text-gray-900 leading-[1.06] tracking-[-0.02em]">
               Trade <span className="text-brand">Smarter</span>

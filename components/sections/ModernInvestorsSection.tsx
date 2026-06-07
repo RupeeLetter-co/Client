@@ -6,7 +6,7 @@ export function ModernInvestorsSection() {
   return (
     <section
       id="investors"
-      className="bg-white py-24 px-6 lg:px-8"
+      className="bg-white py-12 sm:py-16 lg:py-24 px-6 lg:px-8"
       aria-label="Built for modern investors"
     >
       <div className="mx-auto max-w-7xl">

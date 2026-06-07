@@ -5,7 +5,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full max-w-[1920px] mx-auto bg-surface flex items-center justify-center px-4 py-16 sm:px-6 md:px-8 md:py-20 lg:py-24"
+      className="w-full max-w-[1920px] mx-auto bg-surface flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:py-24"
     >
       {/* Center Container */}
       <div className="w-full max-w-[1160px] mx-auto">

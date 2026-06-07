@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
+import { Smartphone } from "lucide-react";
 
 const APP_SCREENS = [
   {
@@ -33,25 +33,75 @@ const APP_SCREENS = [
 
 export function AppShowcaseSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
-  const goToPrev = useCallback(() => {
-    setActiveIndex((prev) => (prev === 0 ? APP_SCREENS.length - 1 : prev - 1));
-  }, []);
+  const handleScroll = useCallback(() => {
+    if (!carouselRef.current || window.innerWidth >= 640) return;
+    const container = carouselRef.current;
+    const scrollLeft = container.scrollLeft;
+    const center = scrollLeft + container.clientWidth / 2;
+    
+    let closestIndex = activeIndex;
+    let minDistance = Infinity;
+    
+    Array.from(container.children).forEach((child, index) => {
+      const childCenter = (child as HTMLElement).offsetLeft + (child as HTMLElement).offsetWidth / 2;
+      const distance = Math.abs(childCenter - center);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = index;
+      }
+    });
+    
+    if (closestIndex !== activeIndex) {
+      setActiveIndex(closestIndex);
+    }
+  }, [activeIndex]);
 
-  const goToNext = useCallback(() => {
-    setActiveIndex((prev) => (prev === APP_SCREENS.length - 1 ? 0 : prev + 1));
-  }, []);
+  useEffect(() => {
+    const isMobile = window.innerWidth < 640;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = prev === APP_SCREENS.length - 1 ? 0 : prev + 1;
+        if (carouselRef.current) {
+           const container = carouselRef.current;
+           const targetChild = container.children[next] as HTMLElement;
+           if (targetChild) {
+             const scrollTarget = targetChild.offsetLeft - container.clientWidth / 2 + targetChild.offsetWidth / 2;
+             container.scrollTo({ left: scrollTarget, behavior: "smooth" });
+           }
+        }
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+
+  const handleSelectIndex = (index: number) => {
+    setActiveIndex(index);
+    if (window.innerWidth < 640 && carouselRef.current) {
+      const container = carouselRef.current;
+      const targetChild = container.children[index] as HTMLElement;
+      if (targetChild) {
+        const scrollTarget = targetChild.offsetLeft - container.clientWidth / 2 + targetChild.offsetWidth / 2;
+        container.scrollTo({ left: scrollTarget, behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <section
       id="showcase"
-      className="relative overflow-hidden py-16 sm:py-20"
+      className="relative overflow-hidden py-10 sm:py-16 lg:py-20"
       aria-label="See RupeeLetter in action"
       style={{ backgroundColor: "#E54350" }}
     >
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col items-center text-center gap-4 sm:gap-5 max-w-2xl mx-auto mb-10 sm:mb-16">
+        <div className="flex flex-col items-center text-center gap-4 sm:gap-5 max-w-2xl mx-auto mb-10 sm:mb-16 px-4">
           <div className="inline-flex">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-white">
               <Smartphone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
@@ -72,7 +122,9 @@ export function AppShowcaseSection() {
 
           {/* Screenshots visible on all devices */}
           <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row items-center justify-items-center justify-center gap-8 sm:gap-12 lg:gap-6 px-10 sm:px-16 lg:px-4"
+            ref={carouselRef}
+            onScroll={handleScroll}
+            className="flex sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center sm:justify-items-center justify-start sm:justify-center gap-6 sm:gap-12 lg:gap-6 px-[calc(50vw-100px)] sm:px-16 lg:px-4 py-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scroll-smooth no-scrollbar w-full"
             role="list"
             aria-label="App screenshots"
           >
@@ -80,13 +132,12 @@ export function AppShowcaseSection() {
               <div
                 key={screen.id}
                 role="listitem"
-                className={`relative w-[200px] lg:w-[260px] xl:w-[280px] h-[440px] lg:h-[540px] xl:h-[600px] flex-shrink-0 transition-all duration-300 ${
+                className={`relative w-[200px] sm:w-[240px] lg:w-[260px] xl:w-[280px] h-[440px] sm:h-[480px] lg:h-[540px] xl:h-[600px] flex-shrink-0 snap-center transition-all duration-300 ${
                   index === activeIndex
-                    ? "scale-105 z-10"
-                    : "scale-95 opacity-70"
+                    ? "scale-105 z-10 opacity-100"
+                    : "scale-95 opacity-50 sm:opacity-70"
                 }`}
-                onMouseEnter={() => setActiveIndex(index)}
-                onTouchStart={() => setActiveIndex(index)}
+                onMouseEnter={() => window.innerWidth >= 640 && setActiveIndex(index)}
               >
                 {/* Active highlight ring */}
                 {index === activeIndex && (
@@ -105,14 +156,14 @@ export function AppShowcaseSection() {
         </div>
 
         {/* Navigation Dots + Labels */}
-        <div className="flex flex-col items-center gap-3 mt-8 sm:mt-10">
+        <div className="flex flex-col items-center gap-3 mt-8 sm:mt-10 px-4">
           {/* Dots */}
           <div className="flex items-center gap-2 sm:gap-3">
             {APP_SCREENS.map((screen, index) => (
               <button
                 key={screen.id}
-                onMouseEnter={() => setActiveIndex(index)}
-                onTouchStart={() => setActiveIndex(index)}
+                onMouseEnter={() => window.innerWidth >= 640 && setActiveIndex(index)}
+                onClick={() => handleSelectIndex(index)}
                 className={`rounded-full transition-all duration-300 outline-none ${
                   index === activeIndex
                     ? "w-8 h-3 bg-white"
@@ -129,6 +180,17 @@ export function AppShowcaseSection() {
           </p>
         </div>
       </div>
+      
+      {/* Custom style to hide scrollbar */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}} />
     </section>
   );
 }

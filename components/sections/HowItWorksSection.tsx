@@ -6,7 +6,7 @@ export function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="bg-surface py-20 px-6 lg:px-8"
+      className="bg-surface py-12 sm:py-16 lg:py-20 px-6 lg:px-8"
       aria-label="How RupeeLetter works"
     >
       <div className="mx-auto max-w-5xl">
