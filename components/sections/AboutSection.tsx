@@ -5,132 +5,49 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      style={{
-        width: "100%",
-        maxWidth: "1920px",
-        margin: "0 auto",
-        height: "924px",
-        backgroundColor: "#F9F8F6",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className="w-full max-w-[1920px] mx-auto min-h-0 bg-surface py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
       aria-label="About RupeeLetter AI"
     >
-      <div
-        style={{
-          width: "1160px",
-          height: "744px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div className="w-full max-w-[1160px] flex flex-col">
         {/* Top Row */}
-        <div
-          style={{
-            width: "1096px",
-            height: "351px",
-            margin: "0 auto",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "48px",
-          }}
-        >
-          
+        <div className="w-full max-w-[1096px] mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-8 mb-10 lg:mb-12">
           {/* Left Column */}
-          <div style={{ width: "516px", height: "351px" }}>
+          <div className="w-full lg:max-w-[516px]">
             {/* Badge */}
-            <div
-              style={{
-                width: "210px",
-                height: "28px",
-                borderRadius: "100px",
-                backgroundColor: "#FFF0F1",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "6px",
-                marginBottom: "24px",
-              }}
-            >
+            <div className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#FFF0F1] px-4 h-7 mb-6">
               <Info size={14} color="#E8393A" strokeWidth={2.5} />
               <span
-                style={{
-                  color: "#E8393A",
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "13px",
-                  fontWeight: 700,
-                  letterSpacing: "0.05em",
-                }}
+                className="text-[13px] font-bold tracking-[0.05em] text-brand"
+                style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
               >
                 ABOUT RUPEELETTER
               </span>
             </div>
 
             {/* Heading */}
-            <h2
-              style={{
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "41.86px",
-                fontWeight: 700,
-                lineHeight: "50.39px",
-                letterSpacing: "-0.84px",
-                color: "#1A1A1A",
-                margin: "0 0 24px 0",
-              }}
-            >
+            <h2 className="font-sans text-3xl md:text-4xl lg:text-[41.86px] font-bold leading-tight lg:leading-[50.39px] tracking-tight text-[#1A1A1A] mb-6">
               About RupeeLetter AI
             </h2>
 
             {/* Description */}
             <p
-              style={{
-                fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                fontSize: "15.55px",
-                lineHeight: "27px",
-                color: "#666666",
-                margin: "0 0 40px 0",
-                width: "516px",
-              }}
+              className="text-sm md:text-[15.55px] leading-relaxed md:leading-[27px] text-[#666666] mb-8 lg:mb-10 max-w-[516px]"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
             >
-              We're building an AI-powered platform that helps investors and traders stay informed, understand market events faster, and make better financial decisions.
+              We&apos;re building an AI-powered platform that helps investors and traders stay informed, understand market events faster, and make better financial decisions.
             </p>
 
             {/* Vision Card */}
-            <div
-              style={{
-                width: "516px",
-                height: "131px",
-                borderRadius: "22px",
-                backgroundColor: "#E54350",
-                padding: "24px 32px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
+            <div className="w-full max-w-[516px] rounded-[22px] bg-brand px-6 md:px-8 py-6 flex flex-col justify-center">
               <span
-                style={{
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "10px",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  color: "rgba(255,255,255,0.8)",
-                  marginBottom: "8px",
-                }}
+                className="text-[10px] font-bold tracking-[0.1em] text-white/80 mb-2"
+                style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
               >
                 OUR VISION
               </span>
               <p
-                style={{
-                  fontFamily: "var(--font-fraunces, 'Fraunces', serif)",
-                  fontSize: "18px",
-                  fontWeight: 700,
-                  lineHeight: "26px",
-                  color: "#FFFFFF",
-                  margin: 0,
-                }}
+                className="text-base md:text-lg font-bold leading-relaxed md:leading-[26px] text-white m-0"
+                style={{ fontFamily: "var(--font-fraunces, 'Fraunces', serif)" }}
               >
                 To become the most trusted AI-powered intelligence platform for retail investors in India.
               </p>
@@ -138,129 +55,93 @@ export function AboutSection() {
           </div>
 
           {/* Right Column */}
-          <div
-            style={{
-              width: "516px",
-              height: "195px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "25.19px",
-                fontWeight: 600,
-                lineHeight: "36px",
-                color: "#1A1A1A",
-                margin: "0 0 24px 0",
-              }}
-            >
-              Simplifying <span style={{ color: "#E8393A" }}>Financial Information</span> for every retail investor in India.
+          <div className="w-full lg:max-w-[516px] flex flex-col justify-center">
+            <h3 className="font-sans text-xl md:text-2xl lg:text-[25.19px] font-semibold leading-snug lg:leading-[36px] text-[#1A1A1A] mb-5 lg:mb-6">
+              Simplifying{" "}
+              <span className="text-brand">Financial Information</span> for
+              every retail investor in India.
             </h3>
             <p
-              style={{
-                fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                fontSize: "14.61px",
-                lineHeight: "25px",
-                color: "#666666",
-                margin: 0,
-                width: "516px",
-              }}
+              className="text-sm md:text-[14.61px] leading-relaxed md:leading-[25px] text-[#666666] m-0"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
             >
-              Financial news is often complex, scattered across multiple sources, and difficult to process quickly. RupeeLetter AI was created to make market information more accessible by combining real-time news, artificial intelligence, and easy-to-understand insights in one platform.
+              Financial news is often complex, scattered across multiple
+              sources, and difficult to process quickly. RupeeLetter AI was
+              created to make market information more accessible by combining
+              real-time news, artificial intelligence, and easy-to-understand
+              insights in one platform.
             </p>
           </div>
         </div>
 
         {/* Bottom Row - Cards */}
-        <div
-          style={{
-            width: "1096px",
-            height: "345px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            rowGap: "15px",
-            columnGap: "16px",
-          }}
-        >
+        <div className="w-full max-w-[1096px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Card 1 */}
-          <div
-            style={{
-              width: "540px",
-              height: "165px",
-              borderRadius: "14px",
-              border: "1px solid #E8E6E1",
-              backgroundColor: "#FFFFFF",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div style={{ width: "32px", height: "32px", borderRadius: "8px", backgroundColor: "#FFF0F1", color: "#E8393A", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px" }}>
+          <div className="w-full rounded-[14px] border border-[#E8E6E1] bg-white p-5 md:p-6 flex flex-col">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF0F1] text-[#E8393A] flex items-center justify-center mb-4">
               <Newspaper size={16} strokeWidth={2} />
             </div>
-            <h4 style={{ fontFamily: "var(--font-sans, sans-serif)", fontWeight: 700, fontSize: "16px", color: "#1A1A1A", margin: "0 0 8px 0" }}>Real-Time Market News</h4>
-            <p style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)", fontSize: "12.67px", fontWeight: 400, lineHeight: "20px", color: "#666666", margin: 0 }}>Stay updated with important market developments as they happen, curated from trusted sources.</p>
+            <h4 className="font-sans font-bold text-base text-[#1A1A1A] mb-2">
+              Real-Time Market News
+            </h4>
+            <p
+              className="text-xs md:text-[12.67px] font-normal leading-5 text-[#666666] m-0"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
+            >
+              Stay updated with important market developments as they happen,
+              curated from trusted sources.
+            </p>
           </div>
+
           {/* Card 2 */}
-          <div
-            style={{
-              width: "540px",
-              height: "165px",
-              borderRadius: "14px",
-              border: "1px solid #E8E6E1",
-              backgroundColor: "#FFFFFF",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div style={{ width: "32px", height: "32px", borderRadius: "8px", backgroundColor: "#E6F9F7", color: "#00C4B5", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px" }}>
+          <div className="w-full rounded-[14px] border border-[#E8E6E1] bg-white p-5 md:p-6 flex flex-col">
+            <div className="w-8 h-8 rounded-lg bg-[#E6F9F7] text-[#00C4B5] flex items-center justify-center mb-4">
               <Sparkles size={16} strokeWidth={2} />
             </div>
-            <h4 style={{ fontFamily: "var(--font-sans, sans-serif)", fontWeight: 700, fontSize: "16px", color: "#1A1A1A", margin: "0 0 8px 0" }}>AI-Powered Insights</h4>
-            <p style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)", fontSize: "12.67px", fontWeight: 400, lineHeight: "20px", color: "#666666", margin: 0 }}>Understand the impact of news and events faster with AI that explains what it means for your money.</p>
+            <h4 className="font-sans font-bold text-base text-[#1A1A1A] mb-2">
+              AI-Powered Insights
+            </h4>
+            <p
+              className="text-xs md:text-[12.67px] font-normal leading-5 text-[#666666] m-0"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
+            >
+              Understand the impact of news and events faster with AI that
+              explains what it means for your money.
+            </p>
           </div>
+
           {/* Card 3 */}
-          <div
-            style={{
-              width: "540px",
-              height: "165px",
-              borderRadius: "14px",
-              border: "1px solid #E8E6E1",
-              backgroundColor: "#FFFFFF",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div style={{ width: "32px", height: "32px", borderRadius: "8px", backgroundColor: "#FFF8E6", color: "#F5A623", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px" }}>
+          <div className="w-full rounded-[14px] border border-[#E8E6E1] bg-white p-5 md:p-6 flex flex-col">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF8E6] text-[#F5A623] flex items-center justify-center mb-4">
               <User size={16} strokeWidth={2} />
             </div>
-            <h4 style={{ fontFamily: "var(--font-sans, sans-serif)", fontWeight: 700, fontSize: "16px", color: "#1A1A1A", margin: "0 0 8px 0" }}>Personalized Experience</h4>
-            <p style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)", fontSize: "12.67px", fontWeight: 400, lineHeight: "20px", color: "#666666", margin: 0 }}>Follow the stocks and topics that matter to you, and get insights tailored to your portfolio.</p>
+            <h4 className="font-sans font-bold text-base text-[#1A1A1A] mb-2">
+              Personalized Experience
+            </h4>
+            <p
+              className="text-xs md:text-[12.67px] font-normal leading-5 text-[#666666] m-0"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
+            >
+              Follow the stocks and topics that matter to you, and get insights
+              tailored to your portfolio.
+            </p>
           </div>
+
           {/* Card 4 */}
-          <div
-            style={{
-              width: "540px",
-              height: "165px",
-              borderRadius: "14px",
-              border: "1px solid #E8E6E1",
-              backgroundColor: "#FFFFFF",
-              padding: "24px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div style={{ width: "32px", height: "32px", borderRadius: "8px", backgroundColor: "#EBF3FF", color: "#2B6CB0", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px" }}>
+          <div className="w-full rounded-[14px] border border-[#E8E6E1] bg-white p-5 md:p-6 flex flex-col">
+            <div className="w-8 h-8 rounded-lg bg-[#EBF3FF] text-[#2B6CB0] flex items-center justify-center mb-4">
               <Users size={16} strokeWidth={2} />
             </div>
-            <h4 style={{ fontFamily: "var(--font-sans, sans-serif)", fontWeight: 700, fontSize: "16px", color: "#1A1A1A", margin: "0 0 8px 0" }}>Investor Community</h4>
-            <p style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)", fontSize: "12.67px", fontWeight: 400, lineHeight: "20px", color: "#666666", margin: 0 }}>Learn, discuss, and grow with a community of like-minded investors across India.</p>
+            <h4 className="font-sans font-bold text-base text-[#1A1A1A] mb-2">
+              Investor Community
+            </h4>
+            <p
+              className="text-xs md:text-[12.67px] font-normal leading-5 text-[#666666] m-0"
+              style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
+            >
+              Learn, discuss, and grow with a community of like-minded investors
+              across India.
+            </p>
           </div>
         </div>
       </div>

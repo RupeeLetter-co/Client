@@ -3,60 +3,20 @@ import { Mail } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <>
-      <style>{`
-        .contact-btn-submit:hover { opacity: 0.9; }
-      `}</style>
     <section
       id="contact"
-      style={{
-        width: "100%",
-        maxWidth: "1920px",
-        margin: "0 auto",
-        height: "929px",
-        backgroundColor: "#F9F8F6",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className="w-full max-w-[1920px] mx-auto bg-surface flex items-center justify-center px-4 py-16 sm:px-6 md:px-8 md:py-20 lg:py-24"
     >
       {/* Center Container */}
-      <div
-        style={{
-          width: "1160px",
-          height: "749px",
-          position: "relative",
-          margin: "0 auto",
-        }}
-      >
+      <div className="w-full max-w-[1160px] mx-auto">
         {/* Header Area */}
-        <div
-          style={{
-            width: "560px",
-            height: "165px",
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
+        <div className="max-w-[560px] mx-auto flex flex-col items-center text-center">
           {/* Badge */}
           <div
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-brand font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-[13px] font-bold tracking-widest uppercase"
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              padding: "4px 12px",
-              borderRadius: "100px",
-              border: "1px solid rgba(232, 57, 58, 0.2)",
+              borderColor: "rgba(232, 57, 58, 0.2)",
               backgroundColor: "rgba(232, 57, 58, 0.05)",
-              color: "#e8393a",
-              fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
             }}
           >
             <Mail size={14} strokeWidth={2.5} />
@@ -64,209 +24,71 @@ export function ContactSection() {
           </div>
 
           {/* Heading */}
-          <h2
-            style={{
-              marginTop: "20px",
-              fontFamily: "var(--font-sans, sans-serif)",
-              fontWeight: 700,
-              fontSize: "40px",
-              color: "#1A1A1A",
-              letterSpacing: "-0.02em",
-            }}
-          >
+          <h2 className="mt-5 font-[var(--font-sans,_sans-serif)] font-bold text-2xl sm:text-3xl lg:text-[40px] lg:leading-tight text-[#1A1A1A] tracking-tight">
             We'd Love to Hear From You
           </h2>
 
           {/* Description */}
-          <p
-            style={{
-              marginTop: "16px",
-              fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-              fontSize: "16px",
-              lineHeight: "26px",
-              color: "#666666",
-            }}
-          >
+          <p className="mt-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm sm:text-base leading-relaxed text-[#666666]">
             Have a question, partnership opportunity, feedback, or media
             inquiry? Get in touch.
           </p>
         </div>
 
         {/* Content Area */}
-        <div
-          style={{
-            width: "1096px",
-            height: "528px",
-            marginTop: "55.8px", // 220.8px from top of container - 165px header = 55.8px
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "flex",
-          }}
-        >
+        <div className="mt-10 lg:mt-14 flex flex-col lg:flex-row gap-8 lg:gap-16">
           {/* Left Card (Contact Form) */}
-          <div
-            style={{
-              position: "relative",
-              width: "516px",
-              height: "528px",
-              borderRadius: "32px",
-              border: "1px solid #E8E6E1",
-              backgroundColor: "#FFFFFF",
-              padding: "41px",
-              boxShadow: "0px 4px 24px rgba(0, 0, 0, 0.02)",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: "var(--font-sans, sans-serif)",
-                fontWeight: 700,
-                fontSize: "22px",
-                color: "#1A1A1A",
-                marginBottom: "32px",
-              }}
-            >
+          <div className="w-full lg:w-1/2 rounded-3xl border border-[#E8E6E1] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_24px_rgba(0,0,0,0.02)] flex flex-col">
+            <h3 className="font-[var(--font-sans,_sans-serif)] font-bold text-lg sm:text-[22px] text-[#1A1A1A] mb-6 sm:mb-8">
               Send a Message
             </h3>
 
-            <div style={{ display: "flex", gap: "16px", marginBottom: "20px" }}>
-              <div style={{ flex: 1 }}>
-                <label
-                  style={{
-                    display: "block",
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#1A1A1A",
-                    marginBottom: "8px",
-                  }}
-                >
+            {/* Name & Email Row */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-5">
+              <div className="flex-1">
+                <label className="block font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-[13px] font-semibold text-[#1A1A1A] mb-2">
                   Full Name
                 </label>
                 <input
                   type="text"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    backgroundColor: "#F6F5F3",
-                    border: "1px solid transparent",
-                    padding: "0 16px",
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    outline: "none",
-                  }}
+                  className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
                 />
               </div>
-              <div style={{ flex: 1 }}>
-                <label
-                  style={{
-                    display: "block",
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#1A1A1A",
-                    marginBottom: "8px",
-                  }}
-                >
+              <div className="flex-1">
+                <label className="block font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-[13px] font-semibold text-[#1A1A1A] mb-2">
                   Email Address
                 </label>
                 <input
                   type="email"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    backgroundColor: "#F6F5F3",
-                    border: "1px solid transparent",
-                    padding: "0 16px",
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    outline: "none",
-                  }}
+                  className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
                 />
               </div>
             </div>
 
-            <div style={{ marginBottom: "20px" }}>
-              <label
-                style={{
-                  display: "block",
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "#1A1A1A",
-                  marginBottom: "8px",
-                }}
-              >
+            {/* Subject */}
+            <div className="mb-5">
+              <label className="block font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-[13px] font-semibold text-[#1A1A1A] mb-2">
                 Subject
               </label>
               <input
                 type="text"
-                style={{
-                  width: "100%",
-                  height: "48px",
-                  borderRadius: "12px",
-                  backgroundColor: "#F6F5F3",
-                  border: "1px solid transparent",
-                  padding: "0 16px",
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "14px",
-                  outline: "none",
-                }}
+                className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
               />
             </div>
 
-            <div style={{ marginBottom: "0", flex: 1 }}>
-              <label
-                style={{
-                  display: "block",
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "#1A1A1A",
-                  marginBottom: "8px",
-                }}
-              >
+            {/* Message */}
+            <div className="flex-1 mb-0">
+              <label className="block font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-[13px] font-semibold text-[#1A1A1A] mb-2">
                 Message
               </label>
               <textarea
-                style={{
-                  width: "100%",
-                  height: "120px",
-                  borderRadius: "12px",
-                  backgroundColor: "#F6F5F3",
-                  border: "1px solid transparent",
-                  padding: "16px",
-                  fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                  fontSize: "14px",
-                  outline: "none",
-                  resize: "none",
-                }}
+                className="w-full h-[120px] rounded-xl bg-[#F6F5F3] border border-transparent p-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none resize-none focus:border-brand"
               />
             </div>
 
+            {/* Submit Button */}
             <button
-              className="contact-btn-submit"
-              style={{
-                width: "434px",
-                height: "48px",
-                margin: "0 auto",
-                borderRadius: "100px",
-                backgroundColor: "#E54350",
-                color: "#FFFFFF",
-                fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                fontWeight: 600,
-                fontSize: "16px",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
-                transition: "opacity 0.2s",
-              }}
+              className="w-full h-12 mt-6 rounded-full bg-brand text-white font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] font-semibold text-base border-none cursor-pointer flex items-center justify-center gap-2.5 transition-opacity duration-200 hover:opacity-90"
             >
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
@@ -276,183 +98,66 @@ export function ContactSection() {
           </div>
 
           {/* Right Information Column */}
-          <div
-            style={{
-              width: "516px",
-              height: "528px",
-              marginLeft: "64px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "16px",
-            }}
-          >
-            {/* Card 1 */}
-            <div
-              style={{
-                borderRadius: "20px",
-                border: "1px solid #E8E6E1",
-                backgroundColor: "#FFFFFF",
-                padding: "24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-              }}
-            >
+          <div className="w-full lg:w-1/2 flex flex-col gap-4">
+            {/* Card 1 — General Inquiries */}
+            <div className="rounded-2xl border border-[#E8E6E1] bg-white p-5 sm:p-6 flex items-start gap-4">
               <div
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
-                  backgroundColor: "rgba(232, 57, 58, 0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#e8393a",
-                  flexShrink: 0,
-                }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "rgba(232, 57, 58, 0.1)", color: "#e8393a" }}
               >
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
               </div>
               <div>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-sans, sans-serif)",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    color: "#1A1A1A",
-                    marginBottom: "4px",
-                  }}
-                >
+                <h4 className="font-[var(--font-sans,_sans-serif)] font-bold text-base text-[#1A1A1A] mb-1">
                   General Inquiries
                 </h4>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    color: "#e8393a",
-                  }}
-                >
+                <p className="font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm text-brand">
                   rupeeletter@gmail.com
                 </p>
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div
-              style={{
-                borderRadius: "20px",
-                border: "1px solid #E8E6E1",
-                backgroundColor: "#FFFFFF",
-                padding: "24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-              }}
-            >
+            {/* Card 2 — Business & Partnerships */}
+            <div className="rounded-2xl border border-[#E8E6E1] bg-white p-5 sm:p-6 flex items-start gap-4">
               <div
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
-                  backgroundColor: "rgba(0, 196, 181, 0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#00C4B5",
-                  flexShrink: 0,
-                }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "rgba(0, 196, 181, 0.1)", color: "#00C4B5" }}
               >
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z" />
                 </svg>
               </div>
               <div>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-sans, sans-serif)",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    color: "#1A1A1A",
-                    marginBottom: "6px",
-                  }}
-                >
-                  Business & Partnerships
+                <h4 className="font-[var(--font-sans,_sans-serif)] font-bold text-base text-[#1A1A1A] mb-1.5">
+                  Business &amp; Partnerships
                 </h4>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    color: "#666666",
-                    lineHeight: "22px",
-                    marginBottom: "6px",
-                  }}
-                >
+                <p className="font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm text-[#666666] leading-[22px] mb-1.5">
                   For partnerships, collaborations, media inquiries, and business
                   opportunities:
                 </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    color: "#e8393a",
-                  }}
-                >
+                <p className="font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm text-brand">
                   rupeeletter@gmail.com
                 </p>
               </div>
             </div>
 
-            {/* Card 3 */}
-            <div
-              style={{
-                borderRadius: "20px",
-                border: "1px solid #E8E6E1",
-                backgroundColor: "#FFFFFF",
-                padding: "24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-              }}
-            >
+            {/* Card 3 — Product Feedback */}
+            <div className="rounded-2xl border border-[#E8E6E1] bg-white p-5 sm:p-6 flex items-start gap-4">
               <div
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
-                  backgroundColor: "rgba(255, 176, 32, 0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#FFB020",
-                  flexShrink: 0,
-                }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "rgba(255, 176, 32, 0.1)", color: "#FFB020" }}
               >
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
                 </svg>
               </div>
               <div>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-sans, sans-serif)",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    color: "#1A1A1A",
-                    marginBottom: "6px",
-                  }}
-                >
+                <h4 className="font-[var(--font-sans,_sans-serif)] font-bold text-base text-[#1A1A1A] mb-1.5">
                   Product Feedback
                 </h4>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    color: "#666666",
-                    lineHeight: "22px",
-                  }}
-                >
+                <p className="font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm text-[#666666] leading-[22px]">
                   We're constantly improving RupeeLetter AI and value feedback from
                   our users. If you have suggestions or feature requests, we'd love
                   to hear from you.
@@ -460,56 +165,24 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Card 4 */}
+            {/* Card 4 — Download the App */}
             <div
+              className="rounded-2xl border p-5 sm:p-6 flex items-start gap-4 flex-1"
               style={{
-                borderRadius: "20px",
-                border: "1px solid rgba(232, 57, 58, 0.1)",
+                borderColor: "rgba(232, 57, 58, 0.1)",
                 backgroundColor: "#FFF5F5",
-                padding: "24px",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                flex: 1,
               }}
             >
-              <div
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
-                  backgroundColor: "#e8393a",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#FFFFFF",
-                  flexShrink: 0,
-                }}
-              >
+              <div className="w-11 h-11 rounded-xl bg-[#e8393a] flex items-center justify-center text-white shrink-0">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z" />
                 </svg>
               </div>
               <div>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-sans, sans-serif)",
-                    fontWeight: 700,
-                    fontSize: "16px",
-                    color: "#e8393a",
-                    marginBottom: "6px",
-                  }}
-                >
+                <h4 className="font-[var(--font-sans,_sans-serif)] font-bold text-base text-brand mb-1.5">
                   Download the App
                 </h4>
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)",
-                    fontSize: "14px",
-                    color: "#666666",
-                    lineHeight: "22px",
-                  }}
-                >
+                <p className="font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm text-[#666666] leading-[22px]">
                   Experience RupeeLetter AI on your phone. Available soon on iOS
                   and Android.
                 </p>
@@ -519,6 +192,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-    </>
   );
 }

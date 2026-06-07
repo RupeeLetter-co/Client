@@ -12,9 +12,9 @@ export function Footer() {
     >
       <div className="mx-auto max-w-6xl px-8 pt-14 pb-8">
         {/* Top grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 lg:gap-8">
           {/* Brand column */}
-          <div className="lg:col-span-1 flex flex-col gap-4">
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
             <Link
               href="#home"
               className="flex items-center w-fit hover:opacity-80 transition-opacity"
@@ -37,7 +37,7 @@ export function Footer() {
 
           {/* Link columns */}
           {FOOTER_SECTIONS.map((section) => (
-            <div key={section.id} className="flex flex-col gap-4">
+            <div key={section.id} className="col-span-1 flex flex-col gap-4">
               <h3 className="text-xs font-normal uppercase tracking-widest text-gray-400">
                 {section.title}
               </h3>
