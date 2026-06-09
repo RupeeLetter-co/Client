@@ -10,10 +10,11 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CTASection } from "@/components/sections/CTASection";
-
+import { LogoLoader } from "@/components/ui/logoloader";
 export default function HomePage() {
   return (
     <>
+      <LogoLoader />
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <HeroSection />

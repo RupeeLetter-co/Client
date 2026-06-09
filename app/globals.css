@@ -95,7 +95,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* RupeeLetter brand tokens */
-  --brand: #E54350;
+  --brand: #e54350;
   --brand-dark: #c72b2c;
   --brand-light: #fef2f2;
   --surface: #f8f7f4;
@@ -255,4 +255,45 @@
 
 .animate-scale-in {
   animation: scaleIn 0.4s ease-out forwards;
+}
+
+@keyframes drawRing {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.78);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes curtainLift {
+  0% {
+    clip-path: inset(0% 0% 0% 0% round 18px);
+  }
+  100% {
+    clip-path: inset(0% 0% 100% 0% round 18px);
+  }
+}
+
+@keyframes dotFade {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
 }
