@@ -8,8 +8,8 @@ export const HERO_STATS: StatItem[] = [
   },
   {
     id: "user-satisfaction",
-    value: "98%",
-    label: "User Satisfaction",
+    value: "100+",
+    label: "Articles Per Day",
   },
   {
     id: "avg-analysis",

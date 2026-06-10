@@ -1,7 +1,39 @@
-import React from "react";
-import { Mail } from "lucide-react";
+"use client";
+
+import React, { FormEvent, useState } from "react";
+import { Mail, Loader2 } from "lucide-react";
 
 export function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus('idle');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      
+      setStatus('success');
+      form.reset();
+    } catch (err) {
+      setStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -38,7 +70,7 @@ export function ContactSection() {
         {/* Content Area */}
         <div className="mt-10 lg:mt-14 flex flex-col lg:flex-row gap-8 lg:gap-16">
           {/* Left Card (Contact Form) */}
-          <div className="w-full lg:w-1/2 rounded-3xl border border-[#E8E6E1] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_24px_rgba(0,0,0,0.02)] flex flex-col">
+          <form onSubmit={handleSubmit} className="w-full lg:w-1/2 rounded-3xl border border-[#E8E6E1] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_24px_rgba(0,0,0,0.02)] flex flex-col">
             <h3 className="font-[var(--font-sans,_sans-serif)] font-bold text-lg sm:text-[22px] text-[#1A1A1A] mb-6 sm:mb-8">
               Send a Message
             </h3>
@@ -51,6 +83,8 @@ export function ContactSection() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
                 />
               </div>
@@ -60,6 +94,8 @@ export function ContactSection() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
                 />
               </div>
@@ -72,6 +108,8 @@ export function ContactSection() {
               </label>
               <input
                 type="text"
+                name="subject"
+                required
                 className="w-full h-12 rounded-xl bg-[#F6F5F3] border border-transparent px-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none focus:border-brand"
               />
             </div>
@@ -82,20 +120,44 @@ export function ContactSection() {
                 Message
               </label>
               <textarea
+                name="message"
+                required
                 className="w-full h-[120px] rounded-xl bg-[#F6F5F3] border border-transparent p-4 font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] text-sm outline-none resize-none focus:border-brand"
               />
             </div>
 
             {/* Submit Button */}
             <button
-              className="w-full h-12 mt-6 rounded-full bg-brand text-white font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] font-semibold text-base border-none cursor-pointer flex items-center justify-center gap-2.5 transition-opacity duration-200 hover:opacity-90"
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full h-12 mt-6 rounded-full bg-brand text-white font-[var(--font-dm-sans,_'DM_Sans',_sans-serif)] font-semibold text-base border-none flex items-center justify-center gap-2.5 transition-opacity duration-200 hover:opacity-90 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-              </svg>
-              Send Message
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="animate-spin w-5 h-5" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                  </svg>
+                  Send Message
+                </>
+              )}
             </button>
-          </div>
+
+            {status === 'success' && (
+              <p className="mt-4 text-sm font-medium text-emerald-600 text-center">
+                Message sent successfully! We'll get back to you soon.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mt-4 text-sm font-medium text-red-600 text-center">
+                Failed to send message. Please try again or email us directly.
+              </p>
+            )}
+          </form>
 
           {/* Right Information Column */}
           <div className="w-full lg:w-1/2 flex flex-col gap-4">

@@ -54,7 +54,7 @@ export function LogoLoader() {
         </svg>
 
         <img
-          src="/logoRL.svg"
+          src="/assets/Link.svg"
           alt="Logo"
           className="w-full h-full block"
           style={{

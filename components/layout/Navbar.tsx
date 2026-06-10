@@ -46,11 +46,11 @@ export function Navbar() {
           aria-label="RupeeLetter - Go to homepage"
         >
           <Image
-            src="/assets/RupeeLetter-logo.svg"
+            src="/assets/Link.svg"
             alt="RupeeLetter"
-            width={160}
-            height={40}
-            className="flex-shrink-0 h-[34px] w-auto"
+            width={180}
+            height={46}
+            className="flex-shrink-0 h-[36px] w-[36px] md:h-[44px] md:w-auto object-cover object-left"
             priority
           />
         </Link>
@@ -113,11 +113,11 @@ export function Navbar() {
               <SheetHeader>
                 <SheetTitle className="flex items-center text-left">
                   <Image
-                    src="/assets/RupeeLetter-logo.svg"
+                    src="/assets/Link.svg"
                     alt="RupeeLetter"
-                    width={140}
-                    height={36}
-                    className="flex-shrink-0 h-[28px] w-auto"
+                    width={160}
+                    height={40}
+                    className="flex-shrink-0 h-[36px] w-[36px] md:w-auto object-cover object-left"
                   />
                 </SheetTitle>
               </SheetHeader>

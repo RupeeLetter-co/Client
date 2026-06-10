@@ -29,19 +29,10 @@ export function TeamSection() {
         </h2>
 
         {/* Cards Container */}
-        <div className="w-full max-w-[1096px] grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
           {/* Card 1 */}
           <div className="w-full max-w-[280px] rounded-[22px] border border-[#E8E6E1] bg-[#F9F8F6] flex flex-col items-center px-6 py-8">
-            {/* Avatar */}
-            <div
-              className="w-20 h-20 rounded-full border-3 border-white flex items-center justify-center font-bold text-xl text-[#E8393A]"
-              style={{
-                background: "linear-gradient(135deg, #FFF0F1 0%, #F9E8EA 100%)",
-                fontFamily: "var(--font-sans, sans-serif)",
-              }}
-            >
-              HG
-            </div>
+            {/* Avatar Removed */}
             {/* Name */}
             <h3
               className="mt-4 font-bold text-base lg:text-lg leading-snug text-center text-[#1A1A1A]"
@@ -67,16 +58,7 @@ export function TeamSection() {
 
           {/* Card 2 */}
           <div className="w-full max-w-[280px] rounded-[22px] border border-[#E8E6E1] bg-[#F9F8F6] flex flex-col items-center px-6 py-8">
-            {/* Avatar */}
-            <div
-              className="w-20 h-20 rounded-full border-3 border-white flex items-center justify-center font-bold text-xl text-[#00C4B5]"
-              style={{
-                background: "linear-gradient(135deg, #E6F9F7 0%, #E0F3F1 100%)",
-                fontFamily: "var(--font-sans, sans-serif)",
-              }}
-            >
-              SP
-            </div>
+            {/* Avatar Removed */}
             {/* Name */}
             <h3
               className="mt-4 font-bold text-base lg:text-lg leading-snug text-center text-[#1A1A1A]"
@@ -89,7 +71,7 @@ export function TeamSection() {
               className="mt-1 font-medium text-[13px] leading-[17px] text-center text-[#5A5A5A]"
               style={{ fontFamily: "var(--font-dm-sans, 'DM Sans', sans-serif)" }}
             >
-              Technical Co-Founder
+              Co-Founder
             </p>
             {/* Description */}
             <p

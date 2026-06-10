@@ -21,11 +21,11 @@ export function Footer() {
               aria-label="RupeeLetter homepage"
             >
               <Image
-                src="/assets/RupeeLetter-logo-dark.svg"
+                src="/assets/Link-dark.svg"
                 alt="RupeeLetter Logo"
-                width={140}
-                height={36}
-                className="flex-shrink-0 h-[28px] w-auto"
+                width={160}
+                height={40}
+                className="flex-shrink-0 h-[36px] w-[36px] md:w-auto object-cover object-left"
               />
             </Link>
 

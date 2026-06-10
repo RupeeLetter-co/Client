@@ -10,10 +10,10 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden bg-white"
       aria-label="Hero — Trade Smarter with AI"
     >
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full pt-24 pb-6 sm:pt-28 sm:pb-16 lg:py-20">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full pt-16 pb-6 sm:pt-28 sm:pb-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[460px_1fr] gap-8 lg:gap-12 items-center">
           {/* ── Left Column ── */}
-          <div className="flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start mt-8 sm:mt-12 lg:mt-0">
+          <div className="flex flex-col gap-5 sm:gap-6 text-center lg:text-left items-center lg:items-start mt-2 sm:mt-12 lg:mt-0">
             {/* Headline */}
             <h1 className="text-[40px] sm:text-[48px] md:text-[54px] lg:text-[62px] font-black text-gray-900 leading-[1.06] tracking-[-0.02em]">
               Trade <span className="text-brand">Smarter</span>
@@ -124,15 +124,16 @@ export function HeroSection() {
 
               {/* ── Main phone image — centred ── */}
               <div
-                className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[400px] sm:w-[300px] sm:h-[460px] md:w-[340px] md:h-[510px] lg:w-[380px] lg:h-[560px]"
               >
                 <Image
                   src="/assets/app-screenshot-hero.png"
                   alt="RupeeLetter app showing AI-curated market news"
-                  width={380}
-                  height={560}
-                  className="object-contain w-[250px] h-[400px] sm:w-[300px] sm:h-[460px] md:w-[340px] md:h-[510px] lg:w-[380px] lg:h-[560px]"
+                  className="object-contain"
+                  fill
+                  sizes="(max-width: 640px) 250px, (max-width: 768px) 300px, (max-width: 1024px) 340px, 380px"
                   priority
+                  loading="eager"
                 />
               </div>
 

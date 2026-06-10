@@ -41,7 +41,7 @@ export const FEATURES: FeatureItem[] = [
     icon: Bell,
     title: "Smart Alerts",
     description:
-      "Get notified about events that matter to your portfolio - before it's too late to act.",
+      "Get notified about events that matter to your portfolio - before it's too late to act. Never miss important opportunities or risk signals again.",
     iconBg: "bg-blue-50",
     iconColor: "text-blue-500",
   },
@@ -50,7 +50,7 @@ export const FEATURES: FeatureItem[] = [
     icon: Bookmark,
     title: "Personalized Feed",
     description:
-      "Your feed adapts to your watchlist and interests. See only what matters to you.",
+      "Your feed adapts to your watchlist and interests. See only what matters to you. Stay updated with tailored insights.",
     iconBg: "bg-emerald-50",
     iconColor: "text-emerald-500",
   },
@@ -59,7 +59,7 @@ export const FEATURES: FeatureItem[] = [
     icon: MessageSquare,
     title: "AI Trading Assistant",
     description:
-      "Ask any market question and get intelligent, context-aware answers instantly.",
+      "Ask any market question and get intelligent, context-aware answers instantly. Analyze stocks, news, and market trends in seconds.",
     iconBg: "bg-rose-50",
     iconColor: "text-rose-500",
   },
