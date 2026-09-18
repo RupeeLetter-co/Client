@@ -152,7 +152,7 @@ export function HeroSection() {
                   2,400+
                 </p>
                 <p className="text-[8px] sm:text-[10px] text-[#9A9A9A] mt-0.5">
-                  articles today
+                  articles 
                 </p>
               </div>
 
